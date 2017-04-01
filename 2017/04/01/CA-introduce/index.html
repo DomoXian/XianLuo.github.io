@@ -6,13 +6,13 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>XianGuo的博客</title>
+  <title>CA证书介绍 | XianGuo的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="在上一篇文章中介绍的TLS/SSL工作的相关算法，有提到非对称加密算法（RSA）用于身份验证和密钥协商，在实现过程中，单纯的依赖RSA算法确实无法保证服务器身份的合法性，因为公钥并不包含服务器的信息，存在一定的安全隐患，举个例子：
 
 a、客户端C和服务器S进行通信，中间节点M截获了二者的通信；b、节点M自己计算产生一对公钥pub_M和私钥pri_M；c、C向S请求公钥时，M把自己的公钥pub_M发">
 <meta property="og:type" content="article">
-<meta property="og:title" content="XianGuo的博客">
+<meta property="og:title" content="CA证书介绍">
 <meta property="og:url" content="http://yoursite.com/2017/04/01/CA-introduce/index.html">
 <meta property="og:site_name" content="XianGuo的博客">
 <meta property="og:description" content="在上一篇文章中介绍的TLS/SSL工作的相关算法，有提到非对称加密算法（RSA）用于身份验证和密钥协商，在实现过程中，单纯的依赖RSA算法确实无法保证服务器身份的合法性，因为公钥并不包含服务器的信息，存在一定的安全隐患，举个例子：
@@ -22,9 +22,9 @@ a、客户端C和服务器S进行通信，中间节点M截获了二者的通信�
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2203779-4c7d496fc5839e83.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2203779-f4cb35fb034f48e0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2203779-38445193aa7e170a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-04-01T02:25:47.000Z">
+<meta property="og:updated_time" content="2017-04-01T02:30:32.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="XianGuo的博客">
+<meta name="twitter:title" content="CA证书介绍">
 <meta name="twitter:description" content="在上一篇文章中介绍的TLS/SSL工作的相关算法，有提到非对称加密算法（RSA）用于身份验证和密钥协商，在实现过程中，单纯的依赖RSA算法确实无法保证服务器身份的合法性，因为公钥并不包含服务器的信息，存在一定的安全隐患，举个例子：
 
 a、客户端C和服务器S进行通信，中间节点M截获了二者的通信；b、节点M自己计算产生一对公钥pub_M和私钥pri_M；c、C向S请求公钥时，M把自己的公钥pub_M发">
@@ -171,6 +171,21 @@ a、客户端C和服务器S进行通信，中间节点M截获了二者的通信�
             <article id="post-CA-introduce" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      CA证书介绍
+    </h1>
+  
+
+        
+        <a href="/2017/04/01/CA-introduce/" class="archive-article-date">
+  	<time datetime="2017-03-31T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-01</time>
+</a>
+        
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
         <p>在<a href="http://www.jianshu.com/p/54a7bd30ea31" target="_blank" rel="external">上一篇</a>文章中介绍的TLS/SSL工作的相关算法，有提到非对称加密算法（RSA）用于身份验证和密钥协商，在实现过程中，单纯的依赖RSA算法确实无法保证服务器身份的合法性，因为公钥并不包含服务器的信息，存在一定的安全隐患，举个例子：</p>
@@ -223,6 +238,17 @@ a、客户端C和服务器S进行通信，中间节点M截获了二者的通信�
       
       
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/证书安全/" class="article-tag-list-link color5">证书安全</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
